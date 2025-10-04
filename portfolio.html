@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="nav-brand">My Portfolio</span>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home" class="home-section">
+        <img src="Batman logo.jpeg" alt="Profile Picture" class="profile-pic">
+        <h1>Jinendra Shah</h1>
+        <p>Computer Science student passionate about databases, web development, and finance research.</p>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a dedicated student focusing on computer science concepts, investment planning, and continuous learning
+            through technical tutorials.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>SQL & Database Design</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python & Linux Commands</li>
+            <li>Investment Analysis</li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A personal website showcasing my skills and projects.</p>
+        </div>
+        <div class="project-card">
+            <h3>Password Manager Web App</h3>
+            <p>Manage passwords locally with security and ease.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <script>
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>

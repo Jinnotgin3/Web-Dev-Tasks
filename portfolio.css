@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap');
+:root {
+  --primary-color: #3278d8;
+  --secondary-color: #f8f8ff;
+  --accent-color: #f1c40f;
+  --text-color: #333;
+  --spacing: 16px;
+  --transition: 0.3s;
+  --border-radius: 8px;
+  --font-main : "Poltawski Nowy", serif;
+  font-optical-sizing: auto;
+  font-weight:bold;
+  font-style: normal;
+}
+
+@keyframes slideIn{
+  from{transform: translateX(50%);}
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing);
+}
+
+.nav-brand {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing);
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  transition: background var(--transition);
+}
+
+.nav-links li a:hover {
+  background: var(--accent-color);
+  color: #111;
+}
+
+.home-section {
+  text-align: center;
+  padding: 48px var(--spacing) 24px var(--spacing);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5vh;
+  margin-bottom: var(--spacing);
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 2px 24px rgba(50,120,216,0.18); 
+  animation-name: slideIn ;
+  animation-duration: 2s;
+}
+
+section {
+  margin: 32px auto;
+  max-width: 700px;
+  padding: 0 var(--spacing);
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  padding: 0;
+}
+
+.skills-list li {
+  background: var(--accent-color);
+  color: #000;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  list-style: none;
+  transition: transform var(--transition);
+}
+
+.skills-list li:hover {
+  transform: scale(1.1);
+}
+
+.project-card {
+  background: var(--secondary-color);
+  border-left: 4px solid var(--primary-color);
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+  border-radius: var(--border-radius);
+  transition: box-shadow var(--transition);
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 16px rgba(50,120,216,0.14);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1em;
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+button:hover {
+  background: var(--accent-color);
+}
+
+@media (max-width: 800px) {
+  .nav-links { flex-direction: column; gap: 4px; }
+}
+
+@media (max-width: 500px) {
+  section { max-width: 98vw; }
+  .profile-pic { width: 80px; height: 80px; }
+  .nav-container { flex-direction: column; align-items: flex-start; }
+}
