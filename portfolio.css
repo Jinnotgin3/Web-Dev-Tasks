@@ -5,7 +5,6 @@
   --accent-color: #f1c40f;
   --text-color: #333;
   --spacing: 16px;
-  --transition: 0.3s;
   --border-radius: 8px;
   --font-main : "Poltawski Nowy", serif;
   font-optical-sizing: auto;
@@ -55,7 +54,6 @@ body {
   text-decoration: none;
   padding: 6px 12px;
   border-radius: var(--border-radius);
-  transition: background var(--transition);
 }
 
 .nav-links li a:hover {
