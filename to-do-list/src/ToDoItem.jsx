@@ -3,7 +3,7 @@ function ToDoItem({ task, isChecked, onDelete, onToggle }) {
         <li>
             <span className="task">{task}</span>
             <button className="del-btn" onClick={onDelete}>
-                Delete
+                🗑️
             </button>
             <button className="toggle-btn" onClick={onToggle}>
                 {isChecked ? "✔️" : "❌"}
