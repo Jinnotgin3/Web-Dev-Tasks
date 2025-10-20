@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #86b5e7;
+    background-color:#FAF9F6;
 }
 
 h1 {
@@ -51,7 +51,7 @@ input{
 }
 
 li{
-    background-color: bisque;
+    background-color: #86b5e798;
     border: 3px solid hsl(0, 2%, 22%);
     border-radius: 5px;
     margin: 3px;
